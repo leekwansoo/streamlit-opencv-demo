@@ -1,0 +1,238 @@
+$ git push heroku master
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 1.62 KiB | 414.00 KiB/s, done.
+Total 14 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Updated 7 paths from a11383a
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-22 stack
+remote: -----> Using buildpacks:
+remote:        1. heroku/python
+remote:        2. https://github.com/heroku/heroku-buildpack-apt
+remote: -----> Python app detected
+remote: -----> Using Python version specified in runtime.txt
+remote: -----> Requirements file has been changed, clearing cached dependencies
+remote: -----> Installing python-3.11.6
+remote: -----> Installing pip 23.2.1, setuptools 68.0.0 and wheel 0.41.0
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting numpy==1.26.0 (from -r requirements.txt (line 1))
+remote:          Obtaining dependency information for numpy==1.26.0 from https://files.pythonhosted.org/packages/c4/36/161e2f8110f8c49e59f6107bd6da4257d30aff9f06373d0471811f73dcc5/numpy-1.26.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading numpy-1.26.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+remote:        Collecting streamlit==1.28.1 (from -r requirements.txt (line 2))
+remote:          Obtaining dependency information for streamlit==1.28.1 from https://files.pythonhosted.org/packages/df/e2/e1c8e3abce0e819a4ef3c6a5af4ddbb1eadbca0cf2ebd5e58853edcd58bd/streamlit-1.28.1-py2.py3-none-any.whl.metadata
+remote:          Downloading streamlit-1.28.1-py2.py3-none-any.whl.metadata (8.1 kB)
+remote:        Collecting opencv-python==4.8.1.78 (from -r requirements.txt (line 3))
+remote:          Obtaining dependency information for opencv-python==4.8.1.78 from https://files.pythonhosted.org/packages/b7/8a/b2f7e1a434d56bf1d7570fc5941ace0847404e1032d7f1f0b8fed896568d/opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+remote:        Collecting altair<6,>=4.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for altair<6,>=4.0 from https://files.pythonhosted.org/packages/17/16/b12fca347ff9d062e3c44ad9641d2ec50364570a059f3078ada3a5119d7a/altair-5.1.2-py3-none-any.whl.metadata
+remote:          Downloading altair-5.1.2-py3-none-any.whl.metadata (8.6 kB)
+remote:        Collecting blinker<2,>=1.0.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for blinker<2,>=1.0.0 from https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl.metadata
+remote:          Downloading blinker-1.7.0-py3-none-any.whl.metadata (1.9 kB)
+remote:        Collecting cachetools<6,>=4.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for cachetools<6,>=4.0 from https://files.pythonhosted.org/packages/a2/91/2d843adb9fbd911e0da45fbf6f18ca89d07a087c3daa23e955584f90ebf4/cachetools-5.3.2-py3-none-any.whl.metadata
+remote:          Downloading cachetools-5.3.2-py3-none-any.whl.metadata (5.2 kB)
+remote:        Collecting click<9,>=7.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for click<9,>=7.0 from https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl.metadata 
+remote:          Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+remote:        Collecting importlib-metadata<7,>=1.4 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for importlib-metadata<7,>=1.4 from https://files.pythonhosted.org/packages/cc/37/db7ba97e676af155f5fcb1a35466f446eadc9104e25b83366e8088c9c926/importlib_metadata-6.8.0-py3-none-any.whl.metadata
+remote:          Downloading importlib_metadata-6.8.0-py3-none-any.whl.metadata (5.1 kB)
+remote:        Collecting packaging<24,>=16.8 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for packaging<24,>=16.8 from https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl.metadata
+remote:          Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+remote:        Collecting pandas<3,>=1.3.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for pandas<3,>=1.3.0 from https://files.pythonhosted.org/packages/f1/c5/1e9c317a5e6af9280ad86a523ab6efe2ca70a0eb4bfb2220d8d08e255ae1/pandas-2.1.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading pandas-2.1.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+remote:        Collecting pillow<11,>=7.1.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for pillow<11,>=7.1.0 from https://files.pythonhosted.org/packages/6f/d8/f31dd84b4363b5f24c71b25a13ec3855f5ff233e07e1c3f1f8e979e12be2/Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata
+remote:          Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+remote:        Collecting protobuf<5,>=3.20 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for protobuf<5,>=3.20 from https://files.pythonhosted.org/packages/ae/32/45b1cf0c5d4a3ba881f5164c26af877c0dabfe6de0019d426aa0e5cf6806/protobuf-4.25.0-cp37-abi3-manylinux2014_x86_64.whl.metadata
+remote:          Downloading protobuf-4.25.0-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+remote:        Collecting pyarrow>=6.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for pyarrow>=6.0 from https://files.pythonhosted.org/packages/37/8c/2af4205496dd04f17dda71404f8f7932130814b94f231d030eb5bd221f3d/pyarrow-14.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata
+remote:          Downloading pyarrow-14.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+remote:        Collecting python-dateutil<3,>=2.7.3 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+remote:        Collecting requests<3,>=2.27 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for requests<3,>=2.27 from https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl.metadata
+remote:          Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+remote:        Collecting rich<14,>=10.14.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for rich<14,>=10.14.0 from https://files.pythonhosted.org/packages/be/2a/4e62ff633612f746f88618852a626bbe24226eba5e7ac90e91dcfd6a414e/rich-13.6.0-py3-none-any.whl.metadata
+remote:          Downloading rich-13.6.0-py3-none-any.whl.metadata (18 kB)
+remote:        Collecting tenacity<9,>=8.1.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for tenacity<9,>=8.1.0 from https://files.pythonhosted.org/packages/f4/f1/990741d5bb2487d529d20a433210ffa136a367751e454214013b441c4575/tenacity-8.2.3-py3-none-any.whl.metadata
+remote:          Downloading tenacity-8.2.3-py3-none-any.whl.metadata (1.0 kB)
+remote:        Collecting toml<2,>=0.10.1 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+remote:        Collecting typing-extensions<5,>=4.3.0 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for typing-extensions<5,>=4.3.0 from https://files.pythonhosted.org/packages/24/21/7d397a4b7934ff4028987914ac1044d3b7d52712f30e2ac7a2ae5bc86dd0/typing_extensions-4.8.0-py3-none-any.whl.metadata
+remote:          Downloading typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+remote:        Collecting tzlocal<6,>=1.1 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for tzlocal<6,>=1.1 from https://files.pythonhosted.org/packages/97/3f/c4c51c55ff8487f2e6d0e618dba917e3c3ee2caae6cf0fbb59c9b1876f2e/tzlocal-5.2-py3-none-any.whl.metadata
+remote:          Downloading tzlocal-5.2-py3-none-any.whl.metadata (7.8 kB)
+remote:        Collecting validators<1,>=0.2 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for validators<1,>=0.2 from https://files.pythonhosted.org/packages/3a/0c/785d317eea99c3739821718f118c70537639aa43f96bfa1d83a71f68eaf6/validators-0.22.0-py3-none-any.whl.metadata
+remote:          Downloading validators-0.22.0-py3-none-any.whl.metadata (4.7 kB)
+remote:        Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for gitpython!=3.1.19,<4,>=3.0.7 from https://files.pythonhosted.org/packages/8d/c4/82b858fb6483dfb5e338123c154d19c043305b01726a67d89532b8f8f01b/GitPython-3.1.40-py3-none-any.whl.metadata
+remote:          Downloading GitPython-3.1.40-py3-none-any.whl.metadata (12 kB)
+remote:        Collecting pydeck<1,>=0.8.0b4 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading pydeck-0.8.1b0-py2.py3-none-any.whl (4.8 MB)
+remote:        Collecting tornado<7,>=6.0.3 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for tornado<7,>=6.0.3 from https://files.pythonhosted.org/packages/66/a5/e6da56c03ff61200d5a43cfb75ab09316fc0836aa7ee26b4e9dcbfc3ae85/tornado-6.3.3-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading tornado-6.3.3-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+remote:        Collecting watchdog>=2.1.5 (from streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading watchdog-3.0.0-py3-none-manylinux2014_x86_64.whl (82 kB)
+remote:        Collecting jinja2 (from altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+remote:        Collecting jsonschema>=3.0 (from altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for jsonschema>=3.0 from https://files.pythonhosted.org/packages/ce/aa/d1bd0b5ec568a903cc3ebcb6b096ab65c1d971c8a01ca3bf3cf788c3c646/jsonschema-4.19.2-py3-none-any.whl.metadata
+remote:          Downloading jsonschema-4.19.2-py3-none-any.whl.metadata (7.9 kB)
+remote:        Collecting toolz (from altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+remote:        Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for gitdb<5,>=4.0.1 from https://files.pythonhosted.org/packages/fd/5b/8f0c4a5bb9fd491c277c21eff7ccae71b47d43c4446c9d0c6cff2fe8c2c4/gitdb-4.0.11-py3-none-any.whl.metadata
+remote:          Downloading gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+remote:        Collecting zipp>=0.5 (from importlib-metadata<7,>=1.4->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for zipp>=0.5 from https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl.metadata     
+remote:          Downloading zipp-3.17.0-py3-none-any.whl.metadata (3.7 kB)
+remote:        Collecting pytz>=2020.1 (from pandas<3,>=1.3.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for pytz>=2020.1 from https://files.pythonhosted.org/packages/32/4d/aaf7eff5deb402fd9a24a1449a8119f00d74ae9c2efa79f8ef9994261fc2/pytz-2023.3.post1-py2.py3-none-any.whl.metadata
+remote:          Downloading pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+remote:        Collecting tzdata>=2022.1 (from pandas<3,>=1.3.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+remote:        Collecting six>=1.5 (from python-dateutil<3,>=2.7.3->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+remote:        Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for charset-normalizer<4,>=2 from https://files.pythonhosted.org/packages/40/26/f35951c45070edc957ba40a5b1db3cf60a9dbb1b350c2d5bef03e01e61de/charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+remote:        Collecting idna<4,>=2.5 (from requests<3,>=2.27->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading idna-3.4-py3-none-any.whl (61 kB)
+remote:        Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for urllib3<3,>=1.21.1 from https://files.pythonhosted.org/packages/d2/b2/b157855192a68541a91ba7b2bbcb91f1b4faa51f8bae38d8005c034be524/urllib3-2.0.7-py3-none-any.whl.metadata
+remote:          Downloading urllib3-2.0.7-py3-none-any.whl.metadata (6.6 kB)
+remote:        Collecting certifi>=2017.4.17 (from requests<3,>=2.27->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for certifi>=2017.4.17 from https://files.pythonhosted.org/packages/4c/dd/2234eab22353ffc7d94e8d13177aaa050113286e93e7b40eae01fbf7c3d9/certifi-2023.7.22-py3-none-any.whl.metadata
+remote:          Downloading certifi-2023.7.22-py3-none-any.whl.metadata (2.2 kB)
+remote:        Collecting markdown-it-py>=2.2.0 (from rich<14,>=10.14.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for markdown-it-py>=2.2.0 from https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl.metadata
+remote:          Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+remote:        Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=10.14.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for pygments<3.0.0,>=2.13.0 from https://files.pythonhosted.org/packages/43/88/29adf0b44ba6ac85045e63734ae0997d3c58d8b1a91c914d240828d0d73d/Pygments-2.16.1-py3-none-any.whl.metadata
+remote:          Downloading Pygments-2.16.1-py3-none-any.whl.metadata (2.5 kB)
+remote:        Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for smmap<6,>=3.0.1 from https://files.pythonhosted.org/packages/a7/a5/10f97f73544edcdef54409f1d839f6049a0d79df68adbc1ceb24d1aaca42/smmap-5.0.1-py3-none-any.whl.metadata
+remote:          Downloading smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+remote:        Collecting MarkupSafe>=2.0 (from jinja2->altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/fe/21/2eff1de472ca6c99ec3993eab11308787b9879af9ca8bbceb4868cf4f2ca/MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+remote:        Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading attrs-23.1.0-py3-none-any.whl (61 kB)
+remote:        Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for jsonschema-specifications>=2023.03.6 from https://files.pythonhosted.org/packages/1c/24/83349ac2189cc2435e84da3f69ba3c97314d3c0622628e55171c6798ed80/jsonschema_specifications-2023.7.1-py3-none-any.whl.metadata
+remote:          Downloading jsonschema_specifications-2023.7.1-py3-none-any.whl.metadata (2.8 kB)
+remote:        Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for referencing>=0.28.4 from https://files.pythonhosted.org/packages/be/8e/56d6f1e2d591f4d6cbcba446cac4a1b0dc4f584537e2071d9bcee8eeab6b/referencing-0.30.2-py3-none-any.whl.metadata
+remote:          Downloading referencing-0.30.2-py3-none-any.whl.metadata (2.6 kB)
+remote:        Collecting rpds-py>=0.7.1 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Obtaining dependency information for rpds-py>=0.7.1 from https://files.pythonhosted.org/packages/55/3f/b145de4d7398913fab9bcda55e8f31947fa48095474f1fe953d8bb1b944e/rpds_py-0.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+remote:          Downloading rpds_py-0.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.7 kB)
+remote:        Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit==1.28.1->-r requirements.txt (line 2))
+remote:          Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+remote:        Downloading numpy-1.26.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+remote:        Downloading streamlit-1.28.1-py2.py3-none-any.whl (8.4 MB)
+remote:        Downloading opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61.7 MB)
+remote:        Downloading altair-5.1.2-py3-none-any.whl (516 kB)
+remote:        Downloading blinker-1.7.0-py3-none-any.whl (13 kB)
+remote:        Downloading cachetools-5.3.2-py3-none-any.whl (9.3 kB)
+remote:        Downloading click-8.1.7-py3-none-any.whl (97 kB)
+remote:        Downloading GitPython-3.1.40-py3-none-any.whl (190 kB)
+remote:        Downloading importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+remote:        Downloading packaging-23.2-py3-none-any.whl (53 kB)
+remote:        Downloading pandas-2.1.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+remote:        Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.6 MB)
+remote:        Downloading protobuf-4.25.0-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+remote:        Downloading pyarrow-14.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (38.0 MB)
+remote:        Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+remote:        Downloading rich-13.6.0-py3-none-any.whl (239 kB)
+remote:        Downloading tenacity-8.2.3-py3-none-any.whl (24 kB)
+remote:        Downloading tornado-6.3.3-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (427 kB)
+remote:        Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+remote:        Downloading tzlocal-5.2-py3-none-any.whl (17 kB)
+remote:        Downloading validators-0.22.0-py3-none-any.whl (26 kB)
+remote:        Downloading certifi-2023.7.22-py3-none-any.whl (158 kB)
+remote:        Downloading charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (140 kB)
+remote:        Downloading gitdb-4.0.11-py3-none-any.whl (62 kB)
+remote:        Downloading jsonschema-4.19.2-py3-none-any.whl (83 kB)
+remote:        Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+remote:        Downloading Pygments-2.16.1-py3-none-any.whl (1.2 MB)
+remote:        Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+remote:        Downloading urllib3-2.0.7-py3-none-any.whl (124 kB)
+remote:        Downloading zipp-3.17.0-py3-none-any.whl (7.4 kB)
+remote:        Downloading jsonschema_specifications-2023.7.1-py3-none-any.whl (17 kB)
+remote:        Downloading MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (28 kB)
+remote:        Downloading referencing-0.30.2-py3-none-any.whl (25 kB)
+remote:        Downloading rpds_py-0.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+remote:        Downloading smmap-5.0.1-py3-none-any.whl (24 kB)
+remote:        Installing collected packages: pytz, zipp, watchdog, validators, urllib3, tzlocal, tzdata, typing-extensions, tornado, toolz, toml, tenacity, smmap, six, rpds-py, pygments, protobuf, pillow, packaging, numpy, mdurl, MarkupSafe, idna, click, charset-normalizer, certifi, cachetools, blinker, attrs, requests, referencing, python-dateutil, pyarrow, opencv-python, markdown-it-py, jinja2, importlib-metadata, gitdb, rich, pydeck, pandas, jsonschema-specifications, gitpython, jsonschema, altair, streamlit
+remote:        Successfully installed MarkupSafe-2.1.3 altair-5.1.2 attrs-23.1.0 blinker-1.7.0 cachetools-5.3.2 certifi-2023.7.22 charset-normalizer-3.3.2 click-8.1.7 gitdb-4.0.11 gitpython-3.1.40 idna-3.4 importlib-metadata-6.8.0 jinja2-3.1.2 jsonschema-4.19.2 jsonschema-specifications-2023.7.1 markdown-it-py-3.0.0 mdurl-0.1.2 numpy-1.26.0 opencv-python-4.8.1.78 packaging-23.2 pandas-2.1.2 pillow-10.1.0 protobuf-4.25.0 pyarrow-14.0.0 pydeck-0.8.1b0 pygments-2.16.1 python-dateutil-2.8.2 pytz-2023.3.post1 referencing-0.30.2 requests-2.31.0 rich-13.6.0 rpds-py-0.12.0 six-1.16.0 smmap-5.0.1 streamlit-1.28.1 tenacity-8.2.3 toml-0.10.2 toolz-0.12.0 tornado-6.3.3 typing-extensions-4.8.0 tzdata-2023.3 tzlocal-5.2 urllib3-2.0.7 validators-0.22.0 watchdog-3.0.0 zipp-3.17.0
+remote: -----> Apt app detected
+remote: -----> Reusing cache
+remote: -----> Updating apt caches
+remote:        Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+remote:        Hit:2 http://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease
+remote:        Get:3 http://archive.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+remote:        Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+remote:        Fetched 229 kB in 1s (331 kB/s)
+remote:        Reading package lists...
+remote: W: http://apt.postgresql.org/pub/repos/apt/dists/jammy-pgdg/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+remote: -----> Fetching .debs for libsm6
+remote:        Reading package lists...
+remote:        Building dependency tree...
+remote:        0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 15 not upgraded.
+remote:        Need to get 0 B/16.7 kB of archives.
+remote:        After this operation, 0 B of additional disk space will be used.
+remote:        Download complete and in download only mode
+remote: -----> Fetching .debs for libxrender1
+remote:        Reading package lists...
+remote:        Building dependency tree...
+remote:        0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 15 not upgraded.
+remote:        Need to get 0 B/19.7 kB of archives.
+remote:        After this operation, 0 B of additional disk space will be used.
+remote:        Download complete and in download only mode
+remote: -----> Fetching .debs for libfontconfig1
+remote:        Reading package lists...
+remote:        Building dependency tree...
+remote:        0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 15 not upgraded.
+remote:        Need to get 0 B/131 kB of archives.
+remote:        After this operation, 0 B of additional disk space will be used.
+remote:        Download complete and in download only mode
+remote: -----> Fetching .debs for libice6
+remote:        Reading package lists...
+remote:        Building dependency tree...
+remote:        0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 15 not upgraded.
+remote:        Need to get 0 B/42.6 kB of archives.
+remote:        After this operation, 0 B of additional disk space will be used.
+remote:        Download complete and in download only mode
+remote: -----> Installing libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb
+remote: -----> Installing libice6_2%3a1.0.10-1build2_amd64.deb
+remote: -----> Installing libsm6_2%3a1.2.3-1build2_amd64.deb
+remote: -----> Installing libxrender1_1%3a0.9.10-1build4_amd64.deb
+remote: -----> Writing profile script
+remote: -----> Rewrite package-config files
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 189.5M
+remote: -----> Launching...
+remote:        Released v4
+remote:        https://streamlit-opencv-demo-8f082dc566f6.herokuapp.com/ deployed to Heroku
